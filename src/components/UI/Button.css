@@ -1,0 +1,16 @@
+.btn{
+    width: 100%;
+    border: 1px solid #fff;
+    background: purple;
+    padding: 12px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media (min-width: 760px) {
+    .btn{
+        width: auto;
+    }
+}
