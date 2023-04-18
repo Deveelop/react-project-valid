@@ -1,14 +1,14 @@
 import React from "react";
-import './UserList.css'
+import styles from './UserList.module.css'
 import Card from "../UI/Card";
 export default function UserList(props) {
 
   return(
-    <Card className='design'>
+    <Card className={styles.users}>
         <ul>
            {
       props.items.map((detail) => {
-        return <li key={Math.random().toString()}>{detail.username} ({detail.age} years old)</li>
+        return <li key={Math.random().toString()}>{detail.name} ({detail.age} years old)</li>
       })
 
       }
