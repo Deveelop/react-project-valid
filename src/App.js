@@ -4,14 +4,11 @@ import UserList from "./components/Users/UserList";
 
 
 function App() {
-  const listUser = [
-    
-];
-const [addUser, setAddUser] = useState(listUser);
+const [addUser, setAddUser] = useState([]);
 
-const onAdding = (lists) => {
+const onAdding = (uName, uAge) => {
 setAddUser(prevUser => {
-  return [lists, ...prevUser]
+  return [...prevUser, {name:uName, age:uAge}]
 });
 }
   return (
