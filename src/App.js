@@ -5,16 +5,19 @@ import UserList from "./components/Users/UserList";
 
 function App() {
 const [addUser, setAddUser] = useState([]);
-
+const [shoow, setShoow] = useState(false);
 const onAdding = (uName, uAge) => {
 setAddUser(prevUser => {
   return [...prevUser, {name:uName, age:uAge}]
 });
+setShoow(true);
 }
+
+
   return (
     <div>
       <AddUsers addHandle = {onAdding} />
-      <UserList items={addUser}/>
+    {shoow && <UserList items={addUser}/>}
      </div> 
   );
 }
